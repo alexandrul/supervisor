@@ -96,7 +96,9 @@ class Options:
         self.add("configfile", None, "c:", "configuration=")
 
         here = os.path.dirname(os.path.dirname(sys.argv[0]))
-        searchpaths = [os.path.join(here, 'etc', 'supervisord.conf'),
+        searchpaths = ['/etc/svd.conf',
+                       '/etc/sv/svd.conf',
+                       os.path.join(here, 'etc', 'supervisord.conf'),
                        os.path.join(here, 'supervisord.conf'),
                        'supervisord.conf',
                        'etc/supervisord.conf',
